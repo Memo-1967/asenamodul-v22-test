@@ -75,7 +75,7 @@ if(main&&!document.querySelector('.project-status-notice')){
 
 const projectForm=document.querySelector('#project-form');
 if(projectForm){
-  projectForm.action='https://formsubmit.co/contact.france.asena@gmail.com';
+  projectForm.action='https://formspree.io/f/xrpbdode';
   projectForm.method='post';
   if(!projectForm.querySelector('[name="_honey"]')){
     const honey=document.createElement('input');
