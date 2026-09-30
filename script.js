@@ -100,64 +100,23 @@ const setProjectStatus=(message,type='')=>{
   if(message) projectStatus.focus({preventScroll:true});
 };
 
-projectForm?.addEventListener('submit',async event=>{
-  event.preventDefault();
-  if(projectSubmitting) return;
+projectForm?.addEventListener('submit',event=>{
+  if(projectSubmitting){
+    event.preventDefault();
+    return;
+  }
   setProjectStatus('');
   if(!projectForm.checkValidity()){
+    event.preventDefault();
     projectForm.reportValidity();
     setProjectStatus('Merci de compléter les champs obligatoires avant l’envoi.','error');
     return;
   }
 
   projectSubmitting=true;
-  const data=new FormData(projectForm);
-  const payload={
-    _subject:'Nouvelle demande de projet ASENAMODUL',
-    _template:'table',
-    _url:location.href,
-    _honey:'',
-    nom:data.get('nom')||'',
-    email:data.get('email')||'',
-    telephone:data.get('telephone')||'Non précisé',
-    commune:data.get('commune')||'',
-    terrain:data.get('terrain')||'Non précisé',
-    surface:data.get('surface')||'Non précisé',
-    chambres:data.get('chambres')||'Non précisé',
-    budget:data.get('budget')||'Non précisé',
-    delai:data.get('delai')||'Non précisé',
-    systeme:data.get('systeme')||'Non précisé',
-    toiture:data.get('toiture')||'Non précisé',
-    finition:data.get('finition')||'Non précisé',
-    message:data.get('message')||'Aucun message complémentaire',
-    consentement:data.get('consentement')||'Non'
-  };
-
-  try{
-    if(projectSubmit){projectSubmit.disabled=true;projectSubmit.textContent='Envoi en cours…';}
-    projectForm.setAttribute('aria-busy','true');
-    setProjectStatus('Envoi de votre demande…','sending');
-    const controller=new AbortController();
-    const timeout=window.setTimeout(()=>controller.abort(),15000);
-    const response=await fetch('https://formsubmit.co/ajax/contact.france.asena@gmail.com',{
-      method:'POST',
-      headers:{'Content-Type':'application/json','Accept':'application/json'},
-      body:JSON.stringify(payload),signal:controller.signal
-    });
-    window.clearTimeout(timeout);
-    const result=await response.json().catch(()=>({}));
-    if(!response.ok||result.success===false||result.success==='false') throw new Error(result.message||'Envoi impossible');
-    projectForm.reset();
-    setProjectStatus('Merci. Votre demande a bien été envoyée à ASENAMODUL. Nous vous recontacterons après étude de votre projet.','success');
-  }catch(error){
-    console.error('ASENAMODUL — erreur formulaire :',error);
-    const timedOut=error?.name==='AbortError';
-    setProjectStatus(timedOut?'Le service met trop de temps à répondre. Merci de réessayer dans quelques instants.':'L’envoi n’a pas abouti. Merci de réessayer dans quelques instants ou de nous contacter directement à contact.france.asena@gmail.com.','error');
-  }finally{
-    projectSubmitting=false;
-    projectForm.removeAttribute('aria-busy');
-    if(projectSubmit){projectSubmit.disabled=false;projectSubmit.textContent='Envoyer ma demande';}
-  }
+  if(projectSubmit){projectSubmit.disabled=true;projectSubmit.textContent='Envoi en cours…';}
+  projectForm.setAttribute('aria-busy','true');
+  setProjectStatus('Envoi de votre demande…','sending');
 });
 
 const enhancementStyles=document.createElement('link');enhancementStyles.rel='stylesheet';enhancementStyles.href='enhancements.css?v=21';document.head.appendChild(enhancementStyles);
