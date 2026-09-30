@@ -1,0 +1,13 @@
+.variants { background: var(--paper); }
+.variant-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+@media (max-width: 1180px) { .variant-grid { grid-template-columns: 1fr 1fr; } }
+.variant-card { border: 1px solid var(--line); background: #fff; }
+.variant-card > img { display: block; width: 100%; aspect-ratio: 3 / 2; object-fit: cover; }
+.variant-content { padding: 30px; }
+.variant-content > div { display: flex; justify-content: space-between; text-transform: uppercase; letter-spacing: .12em; color: #927127; font-size: .76rem; font-weight: 700; }
+.variant-content h3 { font: 700 2rem/1.15 Manrope, sans-serif; margin: 15px 0 12px; }
+.variant-content p { color: #5c6662; }
+.variant-content ul { list-style: none; padding: 18px 0 0; margin: 18px 0 0; border-top: 1px solid var(--line); display: flex; gap: 10px; flex-wrap: wrap; }
+.variant-content li { padding: 7px 11px; background: var(--cream); font-size: .86rem; }
+.concept-note { margin: 24px 0 0; color: #69736f; font-size: .85rem; }
+@media (max-width: 900px) { .variant-grid { grid-template-columns: 1fr; } }

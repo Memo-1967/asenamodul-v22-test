@@ -1,0 +1,32 @@
+EXPORT DU SITE ASENAMODUL
+
+Site : https://asenamodul.com
+Version exportée : 21
+Date : 29 septembre 2026
+
+CONTENU
+- Toutes les pages HTML du site
+- Les feuilles de style CSS
+- Les scripts JavaScript
+- Les images du catalogue et des concepts
+
+OUVRIR LE SITE SUR UN ORDINATEUR
+1. Décompressez le fichier ZIP.
+2. Ouvrez le fichier index.html dans un navigateur.
+
+METTRE LE SITE SUR UN AUTRE HÉBERGEMENT
+Transférez tout le contenu du dossier décompressé dans le dossier public de l’hébergement. Le fichier index.html doit rester à la racine.
+
+IMPORTANT — FORMULAIRE DE CONTACT
+Le formulaire « Votre projet » envoie maintenant les demandes directement à contact.france.asena@gmail.com via FormSubmit, sans ouvrir le logiciel de messagerie du visiteur.
+
+ACTIVATION À FAIRE UNE SEULE FOIS
+1. Mettez cette version du site en ligne.
+2. Faites un premier envoi de test depuis la page « Votre projet ».
+3. FormSubmit enverra un e-mail d’activation à contact.france.asena@gmail.com.
+4. Ouvrez cet e-mail et confirmez l’activation.
+5. Faites un deuxième test : la demande doit ensuite arriver directement dans la boîte de réception.
+
+Le visiteur voit un message de confirmation après un envoi réussi et un message d’erreur si la transmission échoue.
+
+Les plans, surfaces, délais et visuels présentés restent des avant-projets indicatifs à confirmer par les professionnels compétents.

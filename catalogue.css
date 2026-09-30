@@ -1,0 +1,19 @@
+.house-card .range{display:block;color:#f4d38c;font:700 .92rem Manrope,sans-serif;margin:0 0 12px}
+.delivery{background:#fffdf8}
+.delivery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.delivery-grid article{border:1px solid #d8d5cc;padding:34px;min-height:390px;display:flex;flex-direction:column}
+.delivery-grid .delivery-featured{background:#192420;color:#fff;border-color:#192420;transform:translateY(-12px)}
+.delivery-number{font:700 .8rem Manrope,sans-serif;letter-spacing:.14em;color:#a77b22}
+.delivery-label{text-transform:uppercase;letter-spacing:.12em;font-size:.76rem;font-weight:700;color:#927127;margin:48px 0 8px}
+.delivery-featured .delivery-label{color:#e6c36e}
+.delivery-grid h3{font:700 1.75rem/1.15 Manrope,sans-serif;margin:0 0 22px}
+.delivery-grid ul{padding:0;margin:0;list-style:none}
+.delivery-grid li{padding:10px 0;border-top:1px solid #e3e0d8;color:#58635e}
+.delivery-featured li{border-color:#405049;color:#d8e0dc}
+.choice-band{display:grid;grid-template-columns:1fr 1fr;margin-top:34px;background:#d7a945;color:#192420}
+.choice-band>div{padding:30px 34px}
+.choice-band>div+div{border-left:1px solid rgba(25,36,32,.25)}
+.choice-band strong{font:700 1.15rem Manrope,sans-serif}
+.choice-band p{margin:8px 0 0;line-height:1.6}
+.delivery-note{max-width:950px;margin:28px 0 0;color:#68726e;font-size:.9rem;line-height:1.65}
+@media(max-width:900px){.delivery-grid{grid-template-columns:1fr}.delivery-grid .delivery-featured{transform:none}.choice-band{grid-template-columns:1fr}.choice-band>div+div{border-left:0;border-top:1px solid rgba(25,36,32,.25)}}

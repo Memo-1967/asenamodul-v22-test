@@ -1,0 +1,23 @@
+.modular-system{background:#f3f0e8}
+.system-lead{display:grid;grid-template-columns:.9fr 1.1fr;gap:7vw;align-items:start;margin-bottom:56px}
+.system-lead h2{max-width:720px;margin:10px 0 0;font:700 clamp(2rem,4vw,4.5rem)/1.02 Manrope,sans-serif;letter-spacing:-.055em;color:#192420}
+.system-lead>div:last-child{font-size:1.08rem;line-height:1.75;color:#4e5a55}
+.system-highlight{padding-left:20px;border-left:3px solid #d7a945;color:#192420!important;font-weight:600}
+.system-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:#cfd3ce;border:1px solid #cfd3ce}
+.system-grid article{background:#fff;padding:34px 28px;min-height:270px}
+.system-grid span{display:block;color:#a77b22;font:700 .8rem Manrope,sans-serif;letter-spacing:.12em;margin-bottom:44px}
+.system-grid h3,.factory-site h3{font:700 1.25rem/1.25 Manrope,sans-serif;color:#192420;margin:0 0 14px}
+.system-grid p,.factory-site li,.transport-note p{color:#59635f;line-height:1.65}
+.factory-site{display:grid;grid-template-columns:1fr 1fr;margin-top:28px;background:#192420;color:#fff}
+.factory-site article{padding:42px 48px}
+.factory-site article+article{border-left:1px solid #41504a}
+.factory-site h3{color:#fff;font-size:1.55rem}
+.factory-site ul{margin:22px 0 0;padding-left:20px}
+.factory-site li{color:#d6ddd8;margin:9px 0}
+.transport-note{display:grid;grid-template-columns:.45fr 1.55fr;gap:28px;padding:28px 34px;background:#d7a945;color:#192420}
+.transport-note strong{font:700 1.05rem Manrope,sans-serif}
+.transport-note p{margin:0;color:#29332f}
+.process ol{grid-template-columns:repeat(2,1fr)}
+.process-disclaimer{grid-column:1/-1;max-width:1050px;margin:38px auto 0;padding-top:24px;border-top:1px solid rgba(255,255,255,.22);color:#bec8c3;font-size:.9rem;line-height:1.65}
+@media(max-width:1000px){.system-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:720px){.system-lead,.factory-site,.transport-note{grid-template-columns:1fr}.system-grid{grid-template-columns:1fr}.factory-site article{padding:34px 25px}.factory-site article+article{border-left:0;border-top:1px solid #41504a}.process ol{grid-template-columns:1fr}}
