@@ -48,6 +48,8 @@ body { overflow-x: hidden; }
 @media (max-width: 900px) {
   .site-header { padding-left: 20px; padding-right: 20px; }
 
+  .hero-copy { transform: translateY(70px); }
+
   .hero-copy {
     box-sizing: border-box;
     width: 100vw !important;
@@ -70,4 +72,14 @@ body { overflow-x: hidden; }
   }
 
   .hero-proof span { min-width: 0; }
+}
+
+/* Barre du haut sombre et texte d'accueil clairement séparé du logo. */
+.site-header {
+  background: rgba(13, 21, 18, .92);
+  backdrop-filter: blur(8px);
+}
+
+@media (min-width: 901px) {
+  .hero-copy { transform: translateY(100px); }
 }
