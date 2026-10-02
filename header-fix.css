@@ -1,3 +1,12 @@
+/* Barre lisible sur toutes les photos de l'accueil. */
+.site-header{
+  background:rgba(13,21,18,.92);
+  backdrop-filter:blur(8px);
+}
+
+/* Le petit texte doré ne doit jamais passer derrière la barre du haut. */
+.hero-copy{transform:translateY(48px)}
+
 /* Les six onglets principaux restent visibles dès le format tablette paysage. */
 @media (min-width:901px){
   .site-header{padding-left:clamp(18px,2.6vw,46px);padding-right:clamp(18px,2.6vw,46px);gap:clamp(12px,1.7vw,26px)}
@@ -10,4 +19,7 @@
 }
 @media (min-width:1181px){
   .header-cta{display:inline-flex!important;white-space:nowrap;font-size:.86rem;padding:9px 14px}
+}
+@media (max-width:900px){
+  .hero-copy{transform:translateY(30px)}
 }
